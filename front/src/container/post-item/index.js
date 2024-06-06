@@ -28,7 +28,7 @@ export default function Container({ id, username, text, date }) {
 
       if (res.ok) {
         setData(convertData(resData));
-        setStatus(LOAD_STATUS.ERROR);
+        setStatus(LOAD_STATUS.SUCCESS);
       } else {
         setMessage(resData.message);
         setStatus(LOAD_STATUS.ERROR);
@@ -63,7 +63,7 @@ export default function Container({ id, username, text, date }) {
     }
     setOpen(!isOpen);
   };
-  console.log(`status: ${status}`);
+
   return (
     <Box style={{ padding: "0" }}>
       <div
