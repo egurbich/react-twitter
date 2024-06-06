@@ -11,7 +11,7 @@ export default function Component({ username, date, text }) {
         {date}
       </div>
 
-      <p className="post-content__text">{{ text }}</p>
+      <p className="post-content__text">{text}</p>
     </Grid>
   );
 }

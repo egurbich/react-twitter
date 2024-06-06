@@ -63,7 +63,7 @@ export default function Container({ id, username, text, date }) {
     }
     setOpen(!isOpen);
   };
-
+  console.log(`status: ${status}`);
   return (
     <Box style={{ padding: "0" }}>
       <div
@@ -108,7 +108,7 @@ export default function Container({ id, username, text, date }) {
             )}
 
             {status === LOAD_STATUS.SUCCESS &&
-              !data.isEmpty === false &&
+              data.isEmpty === false &&
               data.reply.map((item) => (
                 <Fragment key={item.id}>
                   <Box>
