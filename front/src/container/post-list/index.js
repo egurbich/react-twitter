@@ -24,7 +24,7 @@ export default function Container() {
       const data = await res.json();
 
       if (res.ok) {
-        setMessage(convertData(data));
+        setData(convertData(data));
         setStatus(LOAD_STATUS.SUCCESS);
       } else {
         setMessage(data.message);
@@ -43,7 +43,7 @@ export default function Container() {
       text,
       date: getDate(date),
     })),
-    isEmpty: true,
+    isEmpty: raw.list.length === 0,
   });
 
   if (status === null) {

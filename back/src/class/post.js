@@ -20,7 +20,7 @@ class Post {
     } else {
       this.#list.push(newPost)
     }
-
+    console.log(`test4: ${this.#list.text}`)
     return newPost
   }
 

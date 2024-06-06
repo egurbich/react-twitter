@@ -27,7 +27,7 @@ export default function Container({ id, username, text, date }) {
       const resData = await res.json();
 
       if (res.ok) {
-        setMessage(convertData(resData));
+        setData(convertData(resData));
         setStatus(LOAD_STATUS.ERROR);
       } else {
         setMessage(resData.message);
